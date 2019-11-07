@@ -9,8 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "sequelize": "^4.38.1",
-    "sqlite3": "^4.0.2"
+    "better-sqlite-pool": "^0.1.2",
+    "better-sqlite3": "^5.4.3",
+    "discord.js": "^11.5.1",
+    "enmap": "^4.8.7"
   }
 }
