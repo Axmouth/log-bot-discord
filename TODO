@@ -4,3 +4,5 @@ Possibly move to it instead of plain messages.
 Possibly only add the reaction that changes the current state of an option, in dashboard to avoid unneeded requests.
 Look for ways to reduce requests generally, to avoid rate limiting.
 Add license.
+Escape code block characters from quoted messages.
+Add priviledge check for settings changing commands and dashboard.
