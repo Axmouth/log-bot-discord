@@ -67,3 +67,5 @@ typings/
 
 # vs code workspace
 *.code-workspace
+
+test.js
