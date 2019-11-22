@@ -66,4 +66,4 @@ typings/
 .next
 
 # vs code workspace
-log_bot_disc.code-workspace
+*.code-workspace
