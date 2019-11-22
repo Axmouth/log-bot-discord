@@ -64,3 +64,6 @@ typings/
 
 # next.js build output
 .next
+
+# vs code workspace
+log_bot_disc.code-workspace
