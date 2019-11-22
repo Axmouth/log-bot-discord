@@ -21,12 +21,12 @@ const eventsList = [{
     {
         name: "clientUserGuildSettingsUpdate",
         description: "",
-        loggable: true
+        loggable: false
     },
     {
         name: "clientUserSettingsUpdate",
         description: "",
-        loggable: true
+        loggable: false
     },
     {
         name: "debug",
@@ -91,7 +91,7 @@ const eventsList = [{
     {
         name: "guildMemberSpeaking",
         description: "",
-        loggable: true
+        loggable: false
     },
     {
         name: "guildMemberUpdate",
@@ -101,7 +101,7 @@ const eventsList = [{
     {
         name: "guildUnavailable",
         description: "",
-        loggable: true
+        loggable: false
     },
     {
         name: "guildUpdate",
@@ -151,7 +151,7 @@ const eventsList = [{
     {
         name: "rateLimit",
         description: "",
-        loggable: true
+        loggable: false
     },
     {
         name: "ready",
