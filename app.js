@@ -9,9 +9,7 @@ const client = new Discord.Client();
 
 client.settings = new Enmap({
   name: "settings",
-  options: {
-    dataDir: process.env.ENMAP_DATA_DIR || 'data',
-  },
+  dataDir: process.env.ENMAP_DATA_DIR || 'data',
 });
 
 const eventsList = staticData.eventsList;

@@ -1,16 +1,19 @@
-version: "3"
+version: "3.7"
 services:
     log_bot_discord:
         network_mode: host
         restart: always 
         image: axmouth/log_bot_discord:latest
         container_name: log_bot_discord
-        environment:
-        - ENMAP_DATA_DIR=/var/lib/log_bot_discord/data
         volumes:
-        - datavolume01:/var/lib/log_bot_discord/data
+            - type: bind
+              source: /var/lib/log_bot_discord/data
+              target: /dbdata
+        environment:
+        - ENMAP_DATA_DIR=/dbdata
         deploy:
             restart_policy:
                 condition: any
+
 volumes:
-    datavolume01: {}
+    dbdata:
