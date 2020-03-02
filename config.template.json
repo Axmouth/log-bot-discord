@@ -1,1 +1,1 @@
-{"token":"DISCORD_TOKEN","inv_link":"DISCORD_INV_LINK"}
+{"token":"${DISCORD_TOKEN}","inv_link":"${DISCORD_INV_LINK}"}

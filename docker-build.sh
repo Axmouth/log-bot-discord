@@ -1,12 +1,8 @@
 #!/bin/bash
 
-tpl() {
-    local file=$(cat - | \
-                 sed -e 's/\"/\\"/g' \
-                     -e "s/'/\\'/g")
-    local vars=$(echo ${@} | tr ' ' ';')
-    echo "$(sh -c "${vars};echo \"$file\"")"
-}
+## declare an array variable
+declare -a settings=("DISCORD_TOKEN" "DISCORD_INV_LINK")
+
 
 if [ -e config ]
 then
@@ -20,7 +16,14 @@ then
     echo "ok"
 else
     cp config.template.json config/config.json
-    echo "{\"token\":\"${DISCORD_TOKEN}\",\"inv_link\":\"${DISCORD_INV_LINK}\"}" > config/config.json
+    # echo "{\"token\":\"${DISCORD_TOKEN}\",\"inv_link\":\"${DISCORD_INV_LINK}\"}" > config/config.json
+    ## now loop through the above array
+    for i in "${settings[@]}"
+    do
+    echo "$i"
+    sed -i "s/$var1/ZZ/g" "$config/config.json"
+    # or do whatever with individual element of the array
+    done
 fi
 
 docker build -f Dockerfile -t axmouth/log_bot_discord .
