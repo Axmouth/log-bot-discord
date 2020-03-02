@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "better-sqlite-pool": "^0.1.2",
+    "better-sqlite-pool": "github:eslachance/better-sqlite-pool",
     "better-sqlite3": "^5.4.3",
     "discord.js": "^11.5.1",
     "enmap": "^4.8.7"
