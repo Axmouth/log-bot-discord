@@ -1,11 +1,3 @@
-FROM ubuntu:18.04 AS intermediate
-ARG DISCORD_TOKEN
-ARG DISCORD_INV_LINK
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-RUN mkdir -p config
-RUN echo "{\"token\":\"${DISCORD_TOKEN}\",\"inv_link\":\"${DISCORD_INV_LINK}\"}" > config/config.json
-
 FROM node:13
 COPY --from=intermediate . .
 # Define working directory
