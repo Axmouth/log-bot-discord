@@ -11,9 +11,5 @@ services:
               target: /dbdata
         environment:
         - ENMAP_DATA_DIR=/dbdata
-        deploy:
-            restart_policy:
-                condition: any
-
 volumes:
     dbdata:
