@@ -29,10 +29,11 @@ else
     ## now loop through the above array
     for i in "${settings[@]}"
     do
-    echo "$i"
-    ii=get_value_of $i
-    sed -i "s/${i}/${ii}/g" "config/config.json"
-    # or do whatever with individual element of the array
+        echo "$i"
+        ii=get_value_of $i
+        echo "$ii"
+        sed -i "s/${i}/${ii}/g" "config/config.json"
+        # or do whatever with individual element of the array
     done
 fi
 
