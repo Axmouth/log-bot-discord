@@ -29,9 +29,7 @@ else
     for i in "${settings[@]}"
     do
         echo "$i"
-        ii=$(get_value_of "$i")
-        echo "get_value_of $i"
-        echo "$ii"
+        ii=sed 's/\//\\\//g' $(get_value_of "$i")
         sed -i "s/${i}/${ii}/g" "config/config.json"
     done
 fi
