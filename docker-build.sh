@@ -25,15 +25,14 @@ then
     echo "ok"
 else
     cp config.template.json config/config.json
-    # echo "{\"token\":\"${DISCORD_TOKEN}\",\"inv_link\":\"${DISCORD_INV_LINK}\"}" > config/config.json
     ## now loop through the above array
     for i in "${settings[@]}"
     do
         echo "$i"
         ii=$(get_value_of "$i")
         echo "get_value_of $i"
+        echo "$ii"
         sed -i "s/${i}/${ii}/g" "config/config.json"
-        # or do whatever with individual element of the array
     done
 fi
 
